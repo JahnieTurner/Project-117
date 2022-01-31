@@ -25,9 +25,9 @@ function setup() {
 }
 
 function draw() {
-    check_sketch()
     strokeWeight(10)
     stroke(0)
+    check_sketch()
     if (drawn_sketch == sketch) {
         answer_holder = "set"
         score = score + 1
@@ -40,7 +40,7 @@ function check_sketch() {
     timer_counter = timer_counter + 1
     document.getElementById("time").innerHTML = timer_counter
     if (timer_counter > 20000) {
-        timer_counter = timer_counter - 1
+        timer_counter = 0
         timer_check = "completed"
     }
     if (timer_check == "completed") {
